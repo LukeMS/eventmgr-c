@@ -1,10 +1,11 @@
 eventmgr = libeventmgr.a
 
-IDIR = -Iinc
+IDIR = -Iinc -I/usr/include -I/usr/include/absdt
+LDIR = -L/usr/lib
 ODIR = obj
 SDIR = .
 LIBS = -lzhash -labsdt
-CFLAGS = -static -Wall -W -ggdb -std=c99 $(IDIR) $(LIBS)
+CFLAGS = -static -Wall -W -ggdb -std=c99 $(IDIR) $(LDIR) $(LIBS)
 
 _OBJS := $(patsubst %.c,%.o,$(wildcard *.c))
 OBJS = $(patsubst %,$(ODIR)/%,$(_OBJS))
