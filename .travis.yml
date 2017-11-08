@@ -4,8 +4,8 @@ before_install:
   - git clone https://github.com/LukeMS/absdatatypes-c.git
   - git clone https://github.com/LukeMS/zhash-c.git
 install:
-  - cd absdatatypes-c && make install && cd..
-  - cd zhash-c && make install && cd..
+  - cd absdatatypes-c && make install --file=linux.makefile && cd..
+  - cd zhash-c && make install --file=linux.makefile && cd..
   - sudo make install --file=linux.makefile
 script:
   - cd test01 && make valgrind --file=linux.makefile && cd..
