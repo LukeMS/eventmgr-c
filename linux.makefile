@@ -5,7 +5,7 @@ LDIR = -L/usr/lib
 ODIR = obj
 SDIR = .
 LIBS = -lzhash -labsdt
-CFLAGS = -static -Wall -W -ggdb -std=c99 $(IDIR) $(LDIR) $(LIBS)
+CFLAGS = -Wall -W -ggdb -std=c99 $(IDIR) $(LDIR) $(LIBS)
 
 _OBJS := $(patsubst %.c,%.o,$(wildcard *.c))
 OBJS = $(patsubst %,$(ODIR)/%,$(_OBJS))

@@ -7,7 +7,7 @@ SDIR = .
 IDIR = -I/usr/include -I/usr/include/absdt
 LDIR = -L/usr/lib
 LIBS = -leventmgr -labsdt -lzhash
-CFLAGS = -static -Wall -W -ggdb -std=c99 $(IDIR) $(LDIR)
+CFLAGS = -Wall -W -ggdb -std=c99 $(IDIR) $(LDIR)
 
 _OBJS := $(patsubst %.c,%.o,$(wildcard *.c))
 OBJS = $(patsubst %,$(ODIR)/%,$(_OBJS))
